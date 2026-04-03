@@ -226,7 +226,8 @@ export default function HistoryPage() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-navy px-4 pb-24 pt-6">
+      <div className="min-h-screen bg-navy">
+      <div className="mx-auto max-w-2xl px-4 pb-24 pt-6 sm:px-6">
         {/* Header */}
         <div className="mb-6">
           <h1 className="font-heading text-2xl font-bold text-white">
@@ -255,9 +256,9 @@ export default function HistoryPage() {
             </div>
 
             {/* Type & Payment filters */}
-            <div className="flex gap-2">
+            <div className="grid grid-cols-2 gap-2">
               <Select value={typeFilter} onValueChange={(val) => setTypeFilter(val as FilterType)}>
-                <SelectTrigger className="h-8 flex-1 border-white/10 bg-white/5 text-white">
+                <SelectTrigger className="h-10 w-full border-white/10 bg-white/5 text-white">
                   <SelectValue placeholder="Session Type" />
                 </SelectTrigger>
                 <SelectContent>
@@ -269,7 +270,7 @@ export default function HistoryPage() {
               </Select>
 
               <Select value={paymentFilter} onValueChange={(val) => setPaymentFilter(val as PaymentFilter)}>
-                <SelectTrigger className="h-8 flex-1 border-white/10 bg-white/5 text-white">
+                <SelectTrigger className="h-10 w-full border-white/10 bg-white/5 text-white">
                   <SelectValue placeholder="Payment" />
                 </SelectTrigger>
                 <SelectContent>
@@ -281,11 +282,11 @@ export default function HistoryPage() {
             </div>
 
             {/* Date range */}
-            <div className="flex gap-2">
+            <div className="grid grid-cols-2 gap-2">
               <Popover open={startDateOpen} onOpenChange={setStartDateOpen}>
                 <PopoverTrigger
                   render={
-                    <button className="flex h-8 flex-1 items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 text-xs text-white" />
+                    <button className="flex h-10 w-full items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 text-xs text-white" />
                   }
                 >
                   <CalendarIcon className="size-3.5 text-white/40" />
@@ -306,13 +307,13 @@ export default function HistoryPage() {
               <Popover open={endDateOpen} onOpenChange={setEndDateOpen}>
                 <PopoverTrigger
                   render={
-                    <button className="flex h-8 flex-1 items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 text-xs text-white" />
+                    <button className="flex h-10 w-full items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 text-xs text-white" />
                   }
                 >
                   <CalendarIcon className="size-3.5 text-white/40" />
                   {endDate ? formatFilterDate(endDate) : 'End date'}
                 </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" side="bottom" align="end">
+                <PopoverContent className="w-auto p-0" side="bottom" align="center">
                   <Calendar
                     mode="single"
                     selected={endDate}
@@ -593,6 +594,7 @@ export default function HistoryPage() {
             </DialogFooter>
           </DialogContent>
         </Dialog>
+      </div>
       </div>
     </PageTransition>
   )

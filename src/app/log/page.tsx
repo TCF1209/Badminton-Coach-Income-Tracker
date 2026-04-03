@@ -164,7 +164,7 @@ export default function LogSessionPage() {
 
   return (
     <PageTransition>
-      <div className="mx-auto max-w-lg px-4 pb-8 pt-6">
+      <div className="mx-auto max-w-2xl px-4 pb-8 pt-6 sm:px-6">
         {/* Header */}
         <h1 className="mb-6 font-heading text-2xl font-semibold text-navy">
           Log Session

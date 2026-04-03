@@ -135,7 +135,7 @@ export default function DashboardPage() {
 
   return (
     <PageTransition>
-      <div className="flex flex-col gap-6 pb-8">
+      <div className="mx-auto flex w-full max-w-2xl flex-col gap-6 px-4 pb-8 pt-4 sm:px-6">
         {/* Header */}
         <div className="relative overflow-hidden rounded-2xl bg-navy px-5 py-6 text-white sm:px-8 sm:py-8">
           <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-navy/80" />

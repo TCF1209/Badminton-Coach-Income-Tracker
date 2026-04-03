@@ -185,7 +185,7 @@ export default function StudentsPage() {
 
   return (
     <PageTransition>
-      <div className="mx-auto max-w-lg px-4 pb-24 pt-6">
+      <div className="mx-auto max-w-2xl px-4 pb-24 pt-6 sm:px-6">
         {/* Header */}
         <div className="mb-6 flex items-center justify-between">
           <h1 className="font-heading text-2xl font-bold text-navy">Students</h1>
