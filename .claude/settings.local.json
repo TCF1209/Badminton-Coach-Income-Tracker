@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(npx --version)",
+      "Read(//mnt/c/Users/tchye/Desktop/**)",
+      "Bash(npx create-next-app@latest Badminton_Coach_Income_Tracker --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(npx create-next-app@latest badminton-temp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(find . -maxdepth 1 ! -name '.' ! -name '.git' -exec cp -r {} /mnt/c/Users/tchye/Desktop/Badminton_Coach_Income_Tracker/ \\\\;)",
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest:*)"
+    ]
+  }
+}
